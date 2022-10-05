@@ -1,0 +1,44 @@
+<section class="formulario2">
+<div class="container" *ngIf="proyecto">
+    <div class="py-5 h-100">
+    <div class= "row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <h3 class ="display-5 text-primary text center">ACTUALIZAR PROYECTO</h3>
+                <p></p>
+
+                <div class="form-group">
+                    <label for="nombreP">Nombre del proyecto</label>
+                    <input type="text" placeholder = "Intro modificación nombre"  class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>
+                </div>
+                <p></p>
+                <div class="form-group">
+                    <label for="descripcionP">Descripcion del proyecto</label>
+                    <input type="text"  placeholder = "Intro modificación descripción" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" required>
+                </div>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div> <button class = "btn btn-outline-primary">
+                    Actualizar
+                </button></div>
+
+            </form>
+        </div>
+    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    </div>
+</div>
+</section>
+
+

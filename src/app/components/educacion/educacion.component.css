@@ -1,0 +1,12 @@
+.row{
+    padding: 20px;
+}
+div{
+    background: #88ccfa;
+}
+h1, h3{
+    display: inline;
+}
+.text{
+    text-align: center;
+}

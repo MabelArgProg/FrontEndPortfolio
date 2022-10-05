@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+        <img src="../../../assets/APLogo.png" id="logoAP">
+    </div>
+
+    <div class="redes">
+            <a href="https://www.facebook.com/mabelcristina.pietrobon"><img src="../../../assets/facebook.png" id="facebook"></a>
+            <a href="https://github.com/"><img src="../../../assets/github.png" id="GitHub"></a>
+            <a href="https://twitter.com/home?lang=es"><img src="../../../assets/twitter.png" id="twitter"></a>
+            <a href="https://z-p15.www.instagram.com/"><img src="../../../assets/instagram.png" id="instagram"></a>
+            <button type="button" class="btn btn-primary" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged"> CERRAR SESION</button>
+        </div>
+    </div> 
+    </div>
+    
