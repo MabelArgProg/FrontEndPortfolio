@@ -1,0 +1,37 @@
+[debug] [2023-07-17T02:10:45.025Z] ----------------------------------------------------------------------
+[debug] [2023-07-17T02:10:45.026Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-17T02:10:45.027Z] CLI Version:   12.4.4
+[debug] [2023-07-17T02:10:45.027Z] Platform:      win32
+[debug] [2023-07-17T02:10:45.027Z] Node Version:  v18.2.0
+[debug] [2023-07-17T02:10:45.028Z] Time:          Sun Jul 16 2023 23:10:45 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-07-17T02:10:45.028Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-17T02:10:45.108Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-17T02:10:45.108Z] > authorizing via signed-in user (mabel.cristina9@gmail.com)
+[debug] [2023-07-17T02:10:45.108Z] [iam] checking project frontendmcp for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-17T02:10:45.110Z] > refreshing access token with scopes: []
+[debug] [2023-07-17T02:10:45.111Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-17T02:10:45.111Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-17T02:10:45.329Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-07-17T02:10:45.329Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-17T02:10:45.329Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontendmcp:testIamPermissions [none]
+[debug] [2023-07-17T02:10:45.329Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontendmcp:testIamPermissions x-goog-quota-user=projects/frontendmcp
+[debug] [2023-07-17T02:10:45.330Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontendmcp:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-17T02:10:46.214Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontendmcp:testIamPermissions 401
+[debug] [2023-07-17T02:10:46.214Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontendmcp:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-07-17T02:10:46.215Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-17T02:10:46.216Z] > refreshing access token with scopes: []
+[debug] [2023-07-17T02:10:46.216Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-17T02:10:46.216Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-17T02:10:46.374Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-07-17T02:10:46.374Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-17T02:10:46.375Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/frontendmcp [none]
+[debug] [2023-07-17T02:10:46.565Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/frontendmcp 401
+[debug] [2023-07-17T02:10:46.565Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/frontendmcp {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-07-17T02:10:46.565Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-17T02:10:46.724Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:289:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project frontendmcp. Please make sure the project exists and your account has permission to access it.
